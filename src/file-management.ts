@@ -1,4 +1,4 @@
-import superjson from 'npm:superjson@2.2.1';
+import superjson from 'npm:superjson@2.2.2';
 
 import { ArchiveFileEntry, ArchiveIndex, ArchiveEntry, OperationDay } from './types/v2.ts';
 import { CURRENT_SCRAPER_VERSION, OUTPUT_ROOT_DIRECTORY_PATH, ARCHIVE_ENTRY_JSON_FILES_DIRECTORY_PATH, ARCHIVE_URL } from './constants.ts';

@@ -1,6 +1,6 @@
 // @deno-types="npm:@types/luxon@3"
 import { DateTime } from 'npm:luxon@3.5.0';
-import { MEAL_TIME_FORMAT_FULL, MEAL_TIME_FORMAT_SHORT, OPERATION_DATE_FORMAT_SHORT, OPERATION_DATE_FORMAT_FULL, RESTAURANT_TIMEZONE, ARCHIVE_ENTRY_FILENAME_DATE_FORMAT, RESTAURANT_LOCALE } from './constants.ts';
+import { MEAL_TIME_FORMAT_FULL, MEAL_TIME_FORMAT_SHORT, OPERATION_DATE_FORMAT_SHORT, OPERATION_DATE_FORMAT_FULL, RESTAURANT_TIMEZONE, RESTAURANT_LOCALE } from './constants.ts';
 
 export function capitalizeFirstLetter(stringValue: string) {
     if (stringValue.length === 0) return stringValue;

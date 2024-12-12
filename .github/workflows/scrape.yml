@@ -16,10 +16,10 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
 
-    - name: Use Deno v1.x
+    - name: Use Deno v2.x
       uses: denoland/setup-deno@v1
       with:
-        deno-version: v1.x
+        deno-version: v2.x
 
     - name: Get archive
       uses: actions/checkout@v4

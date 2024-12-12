@@ -1,4 +1,4 @@
-import * as cheerio from 'npm:cheerio@1.0.0-rc.12';
+import * as cheerio from 'npm:cheerio@1.0.0';
 // @deno-types="npm:@types/luxon@3"
 import { DateTime } from 'npm:luxon@3.5.0';
 
