@@ -1,4 +1,4 @@
-export const ARCHIVE_URL = 'https://archive.rusbe.riso.dev';
+export const ARCHIVE_URL = 'https://archive.rusbe.app';
 export const RESTAURANT_TIMEZONE = 'America/Recife';
 export const RESTAURANT_LOCALE = 'pt-BR'
 export const OPERATION_DATE_FORMAT_SHORT = 'dd/MM';

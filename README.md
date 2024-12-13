@@ -7,7 +7,7 @@ Ferramenta de raspagem de dados do Restaurante Universitário da UFPE.
 
 Este script realiza a raspagem (scraping) do cardápio na [página oficial do Restaurante Universitário da UFPE](https://www.ufpe.br/restaurante), convertendo as informações para formato JSON, para que o web app do Rusbé possa utilizá-las.
 
-Uma workflow do Github Actions executa periodicamente o script, salvando os dados do cardápio na _branch_ `archive` deste repositório. Você também pode acessar os arquivos JSON obtidos por raspagem em [archive.rusbe.riso.dev](https://archive.rusbe.riso.dev).
+Uma workflow do Github Actions executa periodicamente o script, salvando os dados do cardápio no repositório [rusbeapp/archive](https://github.com/rusbeapp/archive). Você também pode acessar os arquivos JSON obtidos por raspagem em [archive.rusbe.app](https://archive.rusbe.app).
 
 ## Executando localmente
 
