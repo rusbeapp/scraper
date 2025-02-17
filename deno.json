@@ -1,6 +1,7 @@
 {
   "tasks": {
     "dev": "deno run --unsafely-ignore-certificate-errors=www.ufpe.br --watch src/main.ts",
-    "start": "deno run --allow-net=www.ufpe.br --allow-write --allow-read --unsafely-ignore-certificate-errors=www.ufpe.br src/main.ts"
+    "start": "deno run --allow-net=www.ufpe.br --allow-write --allow-read --unsafely-ignore-certificate-errors=www.ufpe.br src/main.ts",
+    "index-rebuild": "deno run --allow-write --allow-read src/index-rebuild.ts"
   }
 }

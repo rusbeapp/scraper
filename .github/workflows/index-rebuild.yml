@@ -1,0 +1,54 @@
+name: index-rebuild
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Use Deno v2.x
+      uses: denoland/setup-deno@v2
+      with:
+        deno-version: v2.x
+
+    - name: Generate bot token
+      uses: actions/create-github-app-token@v1
+      id: maicon-token
+      with:
+        app-id: ${{ vars.MAICON_BOT_CLIENT_ID }}
+        private-key: ${{ secrets.MAICON_BOT_PRIVATE_KEY }}
+        owner: ${{ github.repository_owner }}
+        repositories: |
+            scraper
+            archive
+
+    - name: Checkout scraper repo
+      uses: actions/checkout@v4
+      with:
+        ref: production
+        token: ${{ steps.maicon-token.outputs.token }}
+
+    - name: Checkout archive repo
+      uses: actions/checkout@v4
+      with:
+        repository: rusbeapp/archive
+        ref: main
+        path: ./dist
+        token: ${{ steps.maicon-token.outputs.token }}
+
+    - name: Run scraper to rebuild index
+      run: |
+        deno task index-rebuild
+      env:
+        CI: true
+
+    - name: Commit updates to archive repo
+      run: |
+          git config --global user.name "MaiconBot[bot]"
+          git config --global user.email "191420508+maiconbot[bot]@users.noreply.github.com"
+          
+          git -C ./dist add .
+          git -C ./dist diff-index --quiet HEAD || git -C ./dist commit -m "chore: update archive index"
+          git -C ./dist push

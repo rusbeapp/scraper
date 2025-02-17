@@ -163,3 +163,5 @@ for (const section of operationDaySections) {
 console.log(`${CURRENT_SCRAPER_VERSION} - Scraping finished, ${operationDays.length} days found`);
 
 saveScrapingOutput(operationDays);
+
+console.log(`${CURRENT_SCRAPER_VERSION} - Finished`);
